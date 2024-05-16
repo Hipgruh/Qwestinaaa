@@ -1,0 +1,63 @@
+        static void Scene()
+        {
+            List<SceneHolder> listScenes = new List<SceneHolder>();
+            // Вам было душно от мира, мир к вам тоже симпатий не испытывал. 
+	    //В монастырях не давали курить, в тюрьме - пить. Оставалась только гильдия. Гильдия - прекрасная страна свободы. 
+            listScenes.Add(new SceneHolder());
+            listScenes[0].SceneActions.AddRange(new[] { "Принять опасное задание гильдии", "Выйти из гильдии и отправиться за границу", "Не взять заказ" });
+            listScenes[0].SceneGoTo.AddRange(new[] { 1, 0, 9});
+            //На потертом свитке содержится карта к заброшенным шахтам
+            listScenes.Add(new SceneHolder());
+            listScenes[1].SceneActions.AddRange(new[] { "Пойти по отмеченному пути", "Попробовать найти дорогу самостоятельно", "Передумать" });
+            listScenes[1].SceneGoTo.AddRange(new[] { 3, 10, 9 });
+            //Вы отправились по указанной дороге и благополучно добрались к пещерам
+            listScenes.Add(new SceneHolder());
+            listScenes[2].SceneActions.AddRange(new[] { "Войти внутрь", "Обыскать округу ", "Бросить всё" });
+            listScenes[2].SceneGoTo.AddRange(new[] { 5, 3, 1 });
+            //Вам встретился на пути молодой Экзорцист
+            listScenes.Add(new SceneHolder());
+            listScenes[3].SceneActions.AddRange(new[] { "Поговорить", "Проигнорировать","Убраться подальше"});
+            listScenes[3].SceneGoTo.AddRange(new[] { 4, 2, 13 });
+            //Парень поведал вам о мрачной истории шахты
+            listScenes.Add(new SceneHolder());
+            listScenes[4].SceneActions.AddRange(new[] { "Всё равно войти в пещеру", "Убраться от опасности восвоясе", "Поболтать ещё" });
+            listScenes[4].SceneGoTo.AddRange(new[] { 5, 13, 4 });
+            //Внутри царила кромешная тьма. Воздух был спёрт и тяжел
+            listScenes.Add(new SceneHolder());
+            listScenes[5].SceneActions.AddRange(new[] { "Зажечь факел и углубиться внутрь", "Повернуть назад", "Потупить в стену" });
+            listScenes[5].SceneGoTo.AddRange(new[] { 6, 3, 6 });
+            //Тьма сгущалась и уже даже огонь не спасал положение. Из-за поворота выплало нечто светящиеся
+            listScenes.Add(new SceneHolder());
+            listScenes[6].SceneActions.AddRange(new[] { "Замереть", "Заорать и убежать", "Страшно выругаться" });
+            listScenes[6].SceneGoTo.AddRange(new[] { 7, 3, 7 });
+            //Призрак смерил вас взглядом и подлетел ближе
+            listScenes.Add(new SceneHolder());
+            listScenes[7].SceneActions.AddRange(new[] { "Поболтать ", "Напасть", "Притвориться стенкой" });
+            listScenes[7].SceneGoTo.AddRange(new[] { 8, 14, 8 });
+            //Фантом поведал вам свою душещипательную историю о жизни и смерти
+            listScenes.Add(new SceneHolder());
+            listScenes[8].SceneActions.AddRange(new[] { "Убить", "Оставить в покое", "Позвать экзорциста" });
+            listScenes[8].SceneGoTo.AddRange(new[] { 11, 13, 12});
+            //
+            listScenes.Add(new SceneHolder());
+            listScenes[9].SceneActions.AddRange(new[] { "Вы не получили деняг и умерли голодной смертью" });
+            //
+            listScenes.Add(new SceneHolder());
+            listScenes[10].SceneActions.AddRange(new[] { "Вы пошли своим путем и спуткнулись на кочке, пропав в болотной тине" });
+            //
+            listScenes.Add(new SceneHolder());
+            listScenes[11].SceneActions.AddRange(new[] { "Вы убили неожидающее подставы приведение и получили награду" });
+            //
+            listScenes.Add(new SceneHolder());
+            listScenes[12].SceneActions.AddRange(new[] { "Экзорцист отправил призрака в лучший мир" });
+            //
+            listScenes.Add(new SceneHolder());
+            listScenes[13].SceneActions.AddRange(new[] { "Вы вернулись обратно ни с чем" });
+            //
+            listScenes.Add(new SceneHolder());
+            listScenes[14].SceneActions.AddRange(new[] { "Призрак ожидал удара и ответным убил вас. Вы ПОМЕР." });
+            //
+            listScenes.Add(new SceneHolder());
+            listScenes[15].SceneActions.AddRange(new[] { "Дальше обитают драконы. Возвращайтесь. Вам приходит мысль, что тут пригодился бы портал." });
+            listScenes[15].SceneGoTo.AddRange(new[] { 0 });
+        }
